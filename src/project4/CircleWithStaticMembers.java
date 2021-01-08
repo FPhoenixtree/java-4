@@ -1,10 +1,22 @@
 package project4;
-
 public class CircleWithStaticMembers {
+	double radius;
+    static int numberOfObjects = 0;
+    CircleWithStaticMembers(){
+        radius = 1;
+        numberOfObjects ++;
+    }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    CircleWithStaticMembers(double newRadius){
+        radius = newRadius;
+        numberOfObjects ++;
+    }
 
-	}
+    static int getNumberOfObjects(){
+        return numberOfObjects;
+    }
 
+    double getArea(){
+        return radius * radius * Math.PI;
+    }
 }
